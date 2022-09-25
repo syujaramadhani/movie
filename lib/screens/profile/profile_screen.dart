@@ -147,7 +147,7 @@ class ProfileScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              RaisedButton(
+              RawMaterialButton(
                 onPressed: () {},
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(80.0),
@@ -177,7 +177,7 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              RaisedButton(
+              RawMaterialButton(
                 onPressed: () {},
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(80.0),

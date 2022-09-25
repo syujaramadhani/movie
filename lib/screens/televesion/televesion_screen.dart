@@ -1,10 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:movie/features/controller.dart/movie_controller.dart';
-import 'package:movie/features/controller.dart/televisions_controller.dart';
+import 'package:movie/features/controller/movie_controller.dart';
+import 'package:movie/features/controller/televisions_controller.dart';
 import 'package:movie/screens/home/detail_movie_screen.dart';
-import 'package:movie/screens/televesion/detail_televesion_screen.dart';
 
 class TelevisionScreen extends StatelessWidget {
   TelevisionScreen({Key? key}) : super(key: key);

@@ -1,9 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:movie/features/controller.dart/movie_controller.dart';
 import 'package:get/get.dart';
-import 'package:movie/features/controller.dart/movie_controller.dart';
-import 'package:movie/features/controller.dart/televisions_controller.dart';
+import 'package:movie/features/controller/movie_controller.dart';
+import 'package:movie/features/controller/televisions_controller.dart';
 import 'package:movie/models/tv_series.dart';
 import 'package:movie/screens/home/detail_movie_screen.dart';
 
@@ -51,10 +50,8 @@ class HomeScreen extends StatelessWidget {
                       height: 10.0,
                     ),
                     SizedBox(
-                      child: GetBuilder<MovieListController>(
-                        initState: (_) => Get.find<MovieListController>()
-                            .fetchGetNowPlaying(),
-                        builder: (val) => movieListController.isLoading1.value
+                      child: Obx(
+                        () => movieListController.isLoading1.value
                             ? const Center(child: CircularProgressIndicator())
                             : ListView(
                                 shrinkWrap: true,
@@ -137,10 +134,8 @@ class HomeScreen extends StatelessWidget {
                       height: 10.0,
                     ),
                     SizedBox(
-                      child: GetBuilder<MovieListController>(
-                        initState: (_) =>
-                            Get.find<MovieListController>().fetchGetUpComing(),
-                        builder: (val) => movieListController.isLoading2.value
+                      child: Obx(
+                        () => movieListController.isLoading2.value
                             ? const Center(child: CircularProgressIndicator())
                             : ListView(
                                 shrinkWrap: true,
@@ -223,10 +218,8 @@ class HomeScreen extends StatelessWidget {
                       height: 10.0,
                     ),
                     SizedBox(
-                      child: GetBuilder<MovieListController>(
-                        initState: (_) =>
-                            Get.find<MovieListController>().fetchGetUpComing(),
-                        builder: (val) => movieListController.isLoading2.value
+                      child: Obx(
+                        () => movieListController.isLoading2.value
                             ? const Center(child: CircularProgressIndicator())
                             : ListView(
                                 shrinkWrap: true,

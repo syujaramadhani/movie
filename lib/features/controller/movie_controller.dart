@@ -13,6 +13,18 @@ class MovieListController extends GetxController {
 
   late MovieModel movieModel;
 
+  @override
+  void onInit() {
+    _loadData();
+    super.onInit();
+  }
+
+  _loadData() async {
+    fetchGetNowPlaying();
+    fetchGetUpComing();
+    fetchGetPopular();
+  }
+
   void fetchGetNowPlaying() async {
     isLoading1(true);
     try {
